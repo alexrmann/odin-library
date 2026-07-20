@@ -22,6 +22,15 @@ function Book(title, author, pages, read) {
     let readLabel = (this.read == true) ? "read" : "not read yet";
     // console.log(readLabel);
     
+    // Long form of the above conditional (ternary) operator
+    //
+    //  let readLabel;
+    //  if (this.read == true) {
+    //    readLabel = "read";
+    //  } else {
+    //    readLabel = "not read yet";
+    //  }
+
     console.log(this.title + " by " + this.author + ", " + this.pages + " pages, " + readLabel);
   };
 }
