@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
   // SAFEGUARD
   if (!new.target) {
