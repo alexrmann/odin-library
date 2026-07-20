@@ -1,5 +1,7 @@
+// Books are stored in this array
 const myLibrary = [];
 
+// The Book Constructor
 function Book(title, author, pages, read) {
   // SAFEGUARD
   if (!new.target) {
