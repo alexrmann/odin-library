@@ -1,6 +1,7 @@
 // ADDS A BOOK TO THE LIBRARY
 
 const bookList = document.querySelector(".book-list"); // Get the list which holds all our books
+const firstInput = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
 const addButton = document.querySelector("button");
 
@@ -36,4 +37,7 @@ addButton.addEventListener("click", (e) => {
   });
 
   addBookToLibrary(...allValues); // Spread the input values to use them as arguments for the new book object;
+
+  firstInput.focus();
+
 });
