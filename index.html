@@ -75,6 +75,12 @@
 
       addButton.addEventListener("click", (e) => {
         e.preventDefault(); // Calling preventDefault() will prevent the form event from refreshing the page, so new items can be added to the list
+
+        addBookToLibrary(...inputs); // Spread the inputs to use them as arguments for the new book object;
+
+        let bookItem = document.createElement('li'); // Create a list item for the book to hold the form values
+
+        bookList.appendChild(bookItem); // Append the book item to the book list
       });
     </script>
   </body>
