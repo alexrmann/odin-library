@@ -89,7 +89,22 @@
 
         bookList.appendChild(bookItem); // Append the book item to the book list
 
-        let bookDelete = document.createElement("button"); // Create a button to delete the book
+        // HANDLE THE INPUT VALUES
+
+        let allValues = []; // Create an array to hold each input value
+
+        inputs.forEach((input) => {
+          // Get the value of each input and then clear the values
+          let inputValue = input.value; // store the value
+          input.value = ""; // clear the value
+
+          allValues.push(inputValue)
+          // let bookValue = document.createElement("div"); // Create a block to hold each value
+
+          // bookValue.innerText(inputValue); // Add each value to the block
+        });
+
+        addBookToLibrary(...allValues); // Spread the input values to use them as arguments for the new book object;
 
       });
     </script>
