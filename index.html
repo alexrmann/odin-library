@@ -5,20 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Library</title>
 
+    <!-- ~~~~~~ -->
     <!-- Styles -->
+    <!-- ~~~~~~ -->
     <link rel="stylesheet" href="styles.css" />
-    
-    <!-- Font -->
+
+    <!-- ~~~~~ -->
+    <!-- Fonts -->
+    <!-- ~~~~~ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    
-    <script src="scripts.js"></script>
+
+    <!-- ~~~~~~~ -->
+    <!-- Scripts -->
+    <!-- ~~~~~~~ -->
+    <script src="scripts.js" defer></script>
+
+    <!-- Among other things, scripts of type="module" are deferred until after the DOM is loaded, and its variables are scoped to the module exclusively. -->
+
+    <!-- Example Script -->
+    <script type="module">
+
+      // Query and assign the div container to a variable
+      const container = document.querySelector("#container");
+
+      // Create a div node for the container's content
+      const content = document.createElement("div");
+
+      // Add a class to the new content node
+      content.classList.add("content");
+
+      // Add text inside the content node
+      content.textContent = "This is the glorious text-content!";
+
+      // Append the content node to the DOM as a child of the container node
+      container.appendChild(content);
+
+      // END
+    </script>
   </head>
   <body>
-    Hello, world
+    <h1>Odin Library</h1>
+    <div id="container"></div>
   </body>
 </html>
