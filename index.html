@@ -69,11 +69,11 @@
     <ul class="book-list"></ul>
 
     <script>
-      const list = document.querySelector("ul");
+      const bookList = document.querySelector("ul"); // Create a list to hold all our books
       const inputs = document.querySelectorAll("input");
-      const button = document.querySelector("button");
+      const addButton = document.querySelector("button");
 
-      button.addEventListener("click", (e) => {
+      addButton.addEventListener("click", (e) => {
         e.preventDefault(); // Calling preventDefault() will prevent the form event from refreshing the page, so new items can be added to the list
       });
     </script>
