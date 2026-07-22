@@ -1,6 +1,5 @@
 // ADDS A BOOK TO THE LIBRARY
 
-const bookList = document.querySelector(".book-list"); // Get the list which holds all our books
 const firstInput = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
 const addButton = document.querySelector("button");

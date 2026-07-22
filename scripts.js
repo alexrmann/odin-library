@@ -1,5 +1,6 @@
 // Books are stored in this array
 const myLibrary = [];
+const bookList = document.querySelector(".book-list"); // Get the list which holds all our books
 
 // The Book Constructor
 function Book(title, author, pages, read) {

@@ -1,9 +1,7 @@
 // Attempting to remove books with event delegation to reduce memory overhead and increase speed.
 // See https://www.javascripttutorial.net/javascript-dom/javascript-event-delegation/ for reference.
 
-const bookList = document.querySelector(".book-list"); // Get the list which holds all our books
-
-bookList.addEventListener('click', (e) => {
+bookList.addEventListener("click", (e) => {
   let target = e.target;
 
   // Consider encapsulating this is its own function to be used as a callback in the event listener.
