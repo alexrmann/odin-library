@@ -19,7 +19,7 @@ function Book(title, author, pages, read) {
     readStatus = this.read;
     // console.log(readStatus);
 
-    let readLabel = (this.read == true) ? "read" : "not read";
+    let readLabel = (this.read === true) ? "read" : "not read";
     // console.log(readLabel);
 
     // Long form of the above conditional (ternary) operator
