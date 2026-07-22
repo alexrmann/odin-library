@@ -23,7 +23,7 @@ addButton.addEventListener("click", (e) => {
   });
 
   addBookToLibrary(...allValues); // Spread the input values to use them as arguments for the new book object;
-
+  console.log(`Added book #${myLibrary[(myLibrary.length - 1)].id}`);
   displayBooks();
   firstInput.focus();
 });
