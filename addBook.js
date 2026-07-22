@@ -2,7 +2,7 @@
 
 const firstInput = document.querySelector("input");
 const inputs = document.querySelectorAll("input");
-const addButton = document.querySelector("button");
+const addButton = document.querySelector(".btn--add");
 
 addButton.addEventListener("click", (e) => {
   e.preventDefault(); // Calling preventDefault() will prevent the form event from refreshing the page, so new items can be added to the list
