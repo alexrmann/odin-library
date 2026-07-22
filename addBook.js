@@ -71,6 +71,10 @@ function displayBooks() {
     bookContent.classList.add("book__content", "card__content");
     let btnDelete = document.createElement("button"); // Create a button to delete the book
     btnDelete.classList.add("btn", "btn--delete", "btn--round");
+    btnDelete.setAttribute("data-id", `${book.id}`); // Add the unique ID
+
+    // Add an event listener to each delete button
+    btnDelete.addEventListener("click", (e) => deleteBook(e));
 
     // ADD CHILDREN TO PARENT
     bookItem.appendChild(bookContent); // Append the content block to the book item
@@ -103,4 +107,41 @@ function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
+}
+
+function deleteBook(e) {
+  let target = e.target;
+  // console.log(target);
+  let targetIdentifier = target.getAttribute("data-id");
+
+  let filteredLibrary = myLibrary.filter(book => {
+    if (book.id === targetIdentifier) {
+      return false;
+    } else {
+      return true;
+    };
+  });
+  console.log(`Removed book #${targetIdentifier}`);
+  myLibrary = filteredLibrary;
+  // Rebuild the library
+  displayBooks();
+
+  // OLD - DELETE WHEN READY
+  // myLibrary.forEach((book) => {
+  //   // Get the index of the current book object
+  //   let bookIndex = myLibrary.indexOf(book);
+  //   console.log(bookIndex);
+
+  //   if (book.id === targetIdentifier) {
+      
+  //     // then remove that item with the splice() method
+  //     myLibrary.splice(myLibrary[bookIndex], 1);
+  //     console.log(myLibrary);
+  //     console.log(`Book ${book.id} removed.`);
+
+  //     // Rebuild the library
+  //     displayBooks();
+  //   };
+  // });
+
 }
