@@ -6,7 +6,7 @@ const bookList = document.querySelector(".book-list"); // Get the list which hol
 bookList.addEventListener('click', (e) => {
   let target = e.target;
 
-  // Consider encapsulating this is its own function, then call the function in the event listener.
+  // Consider encapsulating this is its own function to be used as a callback in the event listener.
   myLibrary.forEach((book) => {
     if (target.id == book.id) {
       // query the id
