@@ -28,10 +28,29 @@ addButton.addEventListener("click", (e) => {
   firstInput.focus();
 });
 
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
+function addBookToLibrary(title, author, pages, read) {
+  // Assign arguments to variables
+  //
+  let bookTitle = title;
+  let bookAuthor = author;
+  let bookPages = pages;
+  let bookReadStatus = read;
+
+  // Create a book
+  //
+  // 1. Create a bookObject variable and call the Book Constructor with the previous argument variables
+  let bookObject = new Book(title, author, pages, read);
+
+  // 2. Assign unique id
+  let bookIdentifier = crypto.randomUUID();
+
+  // 3. Associate the identifier with the book object
+  bookObject.id = bookIdentifier;
+
+  // Store the book in the array
+  //
+  // 1. You'll need to push the `book` to the `myLibrary` array
+  myLibrary.push(bookObject);
 }
 
 function displayBooks() {
@@ -75,4 +94,10 @@ function displayBooks() {
 
     bookList.appendChild(bookItem); // Append the book item to the book list
   });
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
