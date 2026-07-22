@@ -58,6 +58,9 @@ function displayBooks() {
   removeAllChildNodes(bookList);
 
   myLibrary.forEach((book) => {
+    // Debug statement
+    // console.log(`Building book ${book.id}.`);
+
     // CREATE THE BOOK PARENT
     let bookItem = document.createElement("li"); // Create a list item for the book to hold the form values
     bookItem.classList.add("book-list__item", "book", "card"); // Add style hooks to the book item
