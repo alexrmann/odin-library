@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  margin: 0;
+}
+
+.container--layout {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  min-height: 100vh;
+
+  position: relative;
+}
+
+.header--dashboard {
+  color: #fafafa;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: #1992d4;
+  padding: 1rem;
+  padding-right: 2rem;
+
+  z-index: 999;
+}
+
+.sidebar__brand {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  font-size: 1.5rem;
+}
+
+.brand__logo {
+  display: inline-block;
+  width: 3rem;
+}
+
+.brand__title {
+  display: inline-block;
+}
+
+.nav__section {
+  margin-top: 3rem;
+}
+
+.nav__section > * + * {
+  margin-top: 1rem;
+}
+
+.nav__item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  /* align-items: center; */
+}
+
+.nav__icon {
+  justify-self: center;
+}
+
+.icon {
+  width: 24px;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: minmax(min-content, 200px) 1fr;
+
+  position: relative;
+}
+
+.workspace__header,
+.workspace__content {
+  padding: 2rem;
+}
+
+.workspace__header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  background-color: #fafafa;
+  box-shadow: 0 0.25rem 0.25rem rgba(0 0 0 / 0.25);
+
+  z-index: 998;
+}
+
+.row--top,
+.row--bottom {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  justify-items: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon--search {
+  width: 1.5rem;
+}
+
+.search-input {
+  background-color: #e2e8f0;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+.toolbar--account {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-self: end;
+}
+
+.user-profile {
+  display: grid;
+  align-items: center;
+}
+
+.user-profile__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.user-greeting__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.button {
+  color: #fafafa;
+  background-color: #1992d4;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  width: 7rem;
+  height: 3rem;
+}
+
+.toolbar--workspace {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-self: end;
+  max-width: 26rem;
+}
+
+.workspace__content {
+  background-color: #e2e8f0;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.container--content {
+  margin-top: 1rem;
+}
+
+.container--projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f0b429;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0 0 0 / 0.25);
+}
+
+.container--card-content {
+  background-color: #fafafa;
+  margin-left: 0.5rem;
+  padding: 2rem 1.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+  display: grid;
+}
+
+.container--card-content > * + * {
+  margin-top: 0.5rem;
+}
+
+.container--card-content > :last-child {
+  margin-top: 1rem;
+}
+
+.aside > * + * {
+  margin-top: 2rem;
+}
+
+.project__excerpt,
+.announcement__excerpt {
+  color: #707070;
+}
+
+.project__toolbar {
+  justify-self: end;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: end;
+  align-content: end;
+
+  max-width: 8rem;
+}
+
+.container--announcements,
+.container--trending {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0 0 0 / 0.25);
+}
+
+.container--announcements > * + * {
+  border-top: 1px solid #707070;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.announcement > * + * {
+  margin-top: 0.5rem;
+}
+
+.announcement__title {
+  font-size: 1rem;
+}
+
+.announcement__excerpt {
+  font-size: 0.8rem;
+}
+
+.container--trending > * + * {
+  margin-top: 1rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 3rem 4fr;
+  gap: 1rem;
+}
+
+.user__avatar {
+  width: 3rem;
+}
+
+.user__img {
+  border-radius: 50%;
+}
+
+.user__info {
+  font-size: 0.9rem;
+}
+
+.user__info > * + * {
+  margin-top: 0.25rem;
+}
+
+.user__handle {
+  font-weight: 400;
+}
+
+.user__description {
+  color: #707070;
+}

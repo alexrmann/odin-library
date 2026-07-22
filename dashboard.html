@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Title</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container container--layout">
+      <header class="header header--dashboard">
+        <div class="container container--sidebar sidebar">
+          <div class="container sidebar__brand">
+            <span class="brand__logo">
+              <img src="/odin-admin-dashboard/assets/icons/badminton.svg" alt="" />
+            </span>
+            <span class="brand__title">Dashboard</span>
+          </div>
+
+          <nav class="container sidebar__nav nav">
+            <section class="nav__section nav__section--features">
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/home.svg" alt="Home icon" />
+                </div>
+                <div class="item__name">Home</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img
+                    src="/odin-admin-dashboard/assets/icons/card-account-details.svg"
+                    alt="Profile icon"
+                  />
+                </div>
+                <div class="item__name">Profile</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/message-send.svg" alt="Message icon" />
+                </div>
+                <div class="item__name">Message</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/clock.svg" alt="History icon" />
+                </div>
+                <div class="item__name">History</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/file-multiple.svg" alt="Tasks icon" />
+                </div>
+                <div class="item__name">Tasks</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img
+                    src="/odin-admin-dashboard/assets/icons/account-group.svg"
+                    alt="Communities icon"
+                  />
+                </div>
+                <div class="item__name">Communities</div>
+              </div>
+            </section>
+
+            <section class="nav__section nav__section--settings">
+              <div class="setting nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/cog.svg" alt="Settings icon" />
+                </div>
+                <div class="item__name">Settings</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/help-circle.svg" alt="Support icon" />
+                </div>
+                <div class="item__name">Support</div>
+              </div>
+              <div class="nav__item item">
+                <div class="nav__icon icon">
+                  <img src="/odin-admin-dashboard/assets/icons/shield-key.svg" alt="Privacy icon" />
+                </div>
+                <div class="item__name">Privacy</div>
+              </div>
+            </section>
+          </nav>
+        </div>
+      </header>
+      <main class="main workspace">
+        <header class="workspace__header">
+          <div class="container row row--top">
+            <div class="search-bar">
+              <div class="icon icon--search">
+                <img src="/odin-admin-dashboard/assets/icons/magnify.svg" alt="" />
+              </div>
+              <search class="search-input"></search>
+            </div>
+
+            <div class="toolbar toolbar--account">
+              <div class="icon notifications">
+                <img src="/odin-admin-dashboard/assets/icons/bell-ring-outline.svg" alt="" />
+              </div>
+              <div class="user user-profile">
+                <div class="user-profile__avatar">
+                  <img
+                    src="/odin-admin-dashboard/assets/avatars/pfp-2.jpg"
+                    alt="Account avatar"
+                    class="user__img"
+                  />
+                </div>
+                <div class="user-profile__name">Morgan Oakley</div>
+              </div>
+            </div>
+          </div>
+          <div class="container row row--bottom">
+            <div class="user user--main">
+              <div class="user--main__avatar">
+                <img
+                  src="/odin-admin-dashboard/assets/avatars/pfp-2.jpg"
+                  alt="Your avatar"
+                  class="user__img"
+                />
+              </div>
+              <div class="user-greeting">
+                <p class="user-greeting__greeting">Hi there,</p>
+                <p class="user-greeting__name">
+                  Morgan Oakley (<span class="user-greeting__handle"
+                    >@morgan</span
+                  >)
+                </p>
+              </div>
+            </div>
+            <div class="toolbar toolbar--workspace">
+              <button class="button button--new">New</button>
+              <button class="button button--upload">Upload</button>
+              <button class="button button--share">Share</button>
+            </div>
+          </div>
+        </header>
+        <div class="workspace__content">
+          <section class="projects">
+            <h2 class="heading--workspace">Your Projects</h2>
+            <div class="container container--projects container--content">
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Super Cool Project</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Less Cool Project</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Impossible App</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Easy Peasy App</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Ad Blocker</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card project">
+                <div class="container--card-content">
+                  <h3 class="project__title">Money Maker</h3>
+                  <p class="project__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore ad ratione amet culpa veniam minus? Aliquam
+                    aliquid, quibusdam enim, nihil, tenetur veritatis magnam
+                    corrupti et sit libero accusamus totam? Autem.
+                  </p>
+                  <div class="project__toolbar">
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/star-outline.svg"
+                        alt="Add to favorites"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/eye-outline.svg"
+                        alt="Watch this project"
+                      />
+                    </div>
+                    <div class="project__tool">
+                      <img
+                        class="icon"
+                        src="/odin-admin-dashboard/assets/icons/share-variant-outline.svg"
+                        alt="Share project"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <aside class="aside">
+            <section class="annoucements">
+              <h2 class="heading--workspace">Announcements</h2>
+              <div
+                class="container container--announcements container--content"
+              >
+                <article class="announcement">
+                  <h3 class="announcement__title">Site Maintenance</h3>
+                  <p class="announcement__excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid consequatur officiis consectetur, suscipit, quisquam
+                    explicabo voluptates quas blanditiis non inventore...
+                  </p>
+                </article>
+                <article class="announcement">
+                  <h3 class="announcement__title">Community Share Day</h3>
+                  <p class="announcement__excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Obcaecati iusto incidunt similique culpa, magni ratione
+                    perferendis architecto ad neque delectus repudiandae...
+                  </p>
+                </article>
+                <article class="announcement">
+                  <h3 class="announcement__title">Updated Privacy Policy</h3>
+                  <p class="announcement__excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deleniti expedita optio nam dolor obcaecati sunt
+                    consequuntur adipisci velit, non nobis itaque praesentium...
+                  </p>
+                </article>
+              </div>
+            </section>
+            <section class="trending">
+              <h2 class="heading--workspace">Trending</h2>
+              <div class="container container--trending container--content">
+                <article class="user user--trending">
+                  <div class="user__avatar">
+                    <img
+                      src="/odin-admin-dashboard/assets/avatars/pfp-1.jpg"
+                      alt="User avatar"
+                      class="user__img"
+                    />
+                  </div>
+                  <div class="user__info">
+                    <h3 class="user__handle">@tegan</h3>
+                    <p class="user__description">World Peace Builder</p>
+                  </div>
+                </article>
+                <article class="user user--trending">
+                  <div class="user__avatar">
+                    <img
+                      src="/odin-admin-dashboard/assets/avatars/pfp-2.jpg"
+                      alt="User avatar"
+                      class="user__img"
+                    />
+                  </div>
+                  <div class="user__info">
+                    <h3 class="user__handle">@morgan</h3>
+                    <p class="user__description">Super Cool Project</p>
+                  </div>
+                </article>
+                <article class="user user--trending">
+                  <div class="user__avatar">
+                    <img
+                      src="/odin-admin-dashboard/assets/avatars/pfp-3.jpg"
+                      alt="User avatar"
+                      class="user__img"
+                    />
+                  </div>
+                  <div class="user__info">
+                    <h3 class="user__handle">@kendall</h3>
+                    <p class="user__description">Life Changing App</p>
+                  </div>
+                </article>
+                <article class="user user--trending">
+                  <div class="user__avatar">
+                    <img
+                      src="/odin-admin-dashboard/assets/avatars/pfp-4.jpg"
+                      alt="User avatar"
+                      class="user__img"
+                    />
+                  </div>
+                  <div class="user__info">
+                    <h3 class="user__handle">@alex</h3>
+                    <p class="user__description">No Traffic Maker</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
