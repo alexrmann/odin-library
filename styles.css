@@ -108,10 +108,12 @@ button:active {
 }
 
 .container--icon {
+  pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
   display: inline;
 }
 
 .icon {
+  pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
   width: 1.5rem;
   filter: invert(94%) sepia(88%) saturate(0%) hue-rotate(11deg) brightness(110%) contrast(96%);
 }
