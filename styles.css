@@ -18,12 +18,20 @@ input {
   display: block;
 }
 
+.read-status input, .read-status label {
+  display: inline;
+}
+
 .flow > * + * {
   margin-top: 1em;
 }
 
 .group--input {
   margin-top: 1em;
+}
+
+.read-status .group--input:first-of-type {
+  margin-top: 0;
 }
 
 .btn {
