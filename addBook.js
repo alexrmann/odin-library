@@ -84,7 +84,7 @@ function displayBooks() {
     let btnTemplate = `<div class="container--icon">
         <img
           class="icon"
-          src="/assets/icons/trash-can-outline.svg"
+          src="assets/icons/trash-can-outline.svg"
           alt="Delete book"
         />
       </div>`;
