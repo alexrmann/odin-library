@@ -34,7 +34,7 @@ function addBookToLibrary(title, author, pages, read) {
   let bookTitle = title;
   let bookAuthor = author;
   let bookPages = pages;
-  let bookReadStatus = read;
+  let bookReadStatus = read; // TODO: These may need to be accessed globally
 
   // Create a book
   //
