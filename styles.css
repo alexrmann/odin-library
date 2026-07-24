@@ -118,6 +118,7 @@ button:active {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   height: 3rem;
+  box-shadow: 0.1em 0.1em 0.25em #2f2f2f;
 }
 
 .container--icon {
