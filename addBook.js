@@ -110,8 +110,7 @@ function removeAllChildNodes(parent) {
 }
 
 function deleteBook(e) {
-  let target = e.target;
-  // console.log(target);
+  let target = e.target; // console.log(target);
   let targetIdentifier = target.getAttribute("data-id");
 
   let filteredLibrary = myLibrary.filter(book => {
@@ -123,25 +122,17 @@ function deleteBook(e) {
   });
   console.log(`Removed book #${targetIdentifier}`);
   myLibrary = filteredLibrary;
+
   // Rebuild the library
   displayBooks();
 
-  // OLD - DELETE WHEN READY
-  // myLibrary.forEach((book) => {
-  //   // Get the index of the current book object
-  //   let bookIndex = myLibrary.indexOf(book);
-  //   console.log(bookIndex);
+}
 
-  //   if (book.id === targetIdentifier) {
-      
-  //     // then remove that item with the splice() method
-  //     myLibrary.splice(myLibrary[bookIndex], 1);
-  //     console.log(myLibrary);
-  //     console.log(`Book ${book.id} removed.`);
+function markAsRead(e) {
+  let target = e.target; // console.log(target);
+  let targetIdentifier = target.getAttribute("data-id");
 
-  //     // Rebuild the library
-  //     displayBooks();
-  //   };
-  // });
+  // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
 
+  console.log(`Marked book #${targetIdentifier} as read.`);
 }
