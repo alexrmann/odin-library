@@ -39,10 +39,10 @@ function addBookToLibrary(title, author, pages, read) {
   // Create a book
   //
   // 1. Create a bookObject variable and call the Book Constructor with the previous argument variables
-  let bookObject = new Book(title, author, pages, read);
+  const bookObject = new Book(title, author, pages, read);
 
   // 2. Assign unique id
-  let bookIdentifier = crypto.randomUUID();
+  const bookIdentifier = crypto.randomUUID();
 
   // 3. Associate the identifier with the book object
   bookObject.id = bookIdentifier;
@@ -63,13 +63,13 @@ function displayBooks() {
 
     // ~~~~~~~~~~~~~~~~~~~~~~
     // CREATE THE BOOK PARENT
-    let bookItem = document.createElement("li"); // Create a list item for the book to hold the form values
+    const bookItem = document.createElement("li"); // Create a list item for the book to hold the form values
     bookItem.classList.add("book-list__item", "book", "card"); // Add style hooks to the book item
     bookItem.setAttribute("id", `${book.id}`); // Add the unique ID
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // CREATE THE BOOK'S IMMEDIATE CHILDREN
-    let bookContent = document.createElement("div"); // Create a content block for the book item
+    const bookContent = document.createElement("div"); // Create a content block for the book item
     bookContent.classList.add("book__content", "card__content");
     const containerBtns = document.createElement("div"); // Create a content block for the book item
     containerBtns.classList.add("book__buttons", "container");
