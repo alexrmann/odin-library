@@ -69,32 +69,67 @@ function displayBooks() {
     // CREATE THE BOOK'S IMMEDIATE CHILDREN
     let bookContent = document.createElement("div"); // Create a content block for the book item
     bookContent.classList.add("book__content", "card__content");
-    let btnDelete = document.createElement("button"); // Create a button to delete the book
+    const containerBtns = document.createElement("div"); // Create a content block for the book item
+    containerBtns.classList.add("book__buttons", "container");
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // CREATE THE BUTTONS
+    const btnReadStatus = document.createElement("button"); // Create a button to delete the book
+    btnReadStatus.classList.add("btn", "btn--read", "btn--round");
+    btnReadStatus.setAttribute("data-id", `${book.id}`); // Add the unique ID
+
+    const btnDelete = document.createElement("button"); // Create a button to delete the book
     btnDelete.classList.add("btn", "btn--delete", "btn--round");
     btnDelete.setAttribute("data-id", `${book.id}`); // Add the unique ID
 
-    // Add an event listener to each delete button
+    // Add an event listener to each button
+    btnReadStatus.addEventListener("click", (e) => markAsRead(e));
     btnDelete.addEventListener("click", (e) => deleteBook(e));
 
+    // ~~~~~~~~~~~~~~~~~~~~~~
     // ADD CHILDREN TO PARENT
     bookItem.appendChild(bookContent); // Append the content block to the book item
-    bookItem.appendChild(btnDelete); // Append the delete button to the book item
+    bookItem.appendChild(containerBtns); // Append the button container to the book item
 
-    // Create Button Template
-    let btnTemplate = `<div class="container--icon">
+    // ~~~~~~~~~~~~~~~~~~~~~~
+    // ADD BUTTONS TO PARENT CONTAINER
+    containerBtns.appendChild(btnReadStatus); // Append the delete button to the book item
+    containerBtns.appendChild(btnDelete); // Append the delete button to the book item
+
+    // Create Button Templates
+
+    // if (book.read === true) { book-check.svg } else { book-outline; }
+    let btnTemplateReadStatus = `<div class="container--icon">
+        <img
+          class="icon"
+          ${
+            book.read === false
+              ? `src="assets/icons/book-outline.svg"
+              alt="Mark book as read"`
+              : `src="assets/icons/book-check.svg"
+              alt="Mark book as not read"`
+          }
+        />
+      </div>`;
+
+    let btnTemplateDelete = `<div class="container--icon">
         <img
           class="icon"
           src="assets/icons/trash-can-outline.svg"
           alt="Delete book"
         />
       </div>`;
-    btnDelete.innerHTML = btnTemplate;
+
+    // Conditionally add template to buttons
+
+    btnReadStatus.innerHTML = btnTemplateReadStatus;
+    btnDelete.innerHTML = btnTemplateDelete;
 
     // Create Book Template using the array objects
     let bookTemplate = `<h3 class="book__title">${book.title}</h3>
       <p class="book__author">${book.author}</p>
       <p class="book__pages">${book.pages}</p>
-      <p class="book__status">${book.read}</p>`;
+      <p class="book__status">${book.read === true ? `I have read this` : `I have not read this yet`}</p>`;
 
     // ADD MARKUP to bookCONTENT
     bookContent.innerHTML = bookTemplate;
@@ -106,6 +141,24 @@ function displayBooks() {
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
+  }
+}
+
+function markAsRead(e) {
+  let target = e.target; // console.log(target);
+  let targetIdentifier = target.getAttribute("data-id");
+
+  // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
+  if (book.read === false) {
+    book.read = true;
+    // change button icon to book-check
+    // change alt text to "Mark book as not read"
+    console.log(`Marked book #${targetIdentifier} as read.`);
+  } else {
+    book.read = false;
+    // change button icon to book-outline
+    // change alt text to "Mark book as read"
+    console.log(`Marked book #${targetIdentifier} as not read.`);
   }
 }
 
@@ -125,14 +178,4 @@ function deleteBook(e) {
 
   // Rebuild the library
   displayBooks();
-
-}
-
-function markAsRead(e) {
-  let target = e.target; // console.log(target);
-  let targetIdentifier = target.getAttribute("data-id");
-
-  // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
-
-  console.log(`Marked book #${targetIdentifier} as read.`);
 }

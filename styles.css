@@ -102,10 +102,15 @@ button:active {
   margin-top: 1rem;
 }
 
+.book__buttons {
+	display: flex;
+	gap: 0.5em;
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+}
+
 .btn--round {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
   color: #fafafa;
   padding: 0.5rem;
   font-weight: 500;
