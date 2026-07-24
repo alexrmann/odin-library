@@ -61,11 +61,13 @@ function displayBooks() {
     // Debug statement
     // console.log(`Building book ${book.id}.`);
 
+    // ~~~~~~~~~~~~~~~~~~~~~~
     // CREATE THE BOOK PARENT
     let bookItem = document.createElement("li"); // Create a list item for the book to hold the form values
     bookItem.classList.add("book-list__item", "book", "card"); // Add style hooks to the book item
     bookItem.setAttribute("id", `${book.id}`); // Add the unique ID
 
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // CREATE THE BOOK'S IMMEDIATE CHILDREN
     let bookContent = document.createElement("div"); // Create a content block for the book item
     bookContent.classList.add("book__content", "card__content");
@@ -166,12 +168,12 @@ function deleteBook(e) {
   let target = e.target; // console.log(target);
   let targetIdentifier = target.getAttribute("data-id");
 
-  let filteredLibrary = myLibrary.filter(book => {
+  let filteredLibrary = myLibrary.filter((book) => {
     if (book.id === targetIdentifier) {
       return false;
     } else {
       return true;
-    };
+    }
   });
   console.log(`Removed book #${targetIdentifier}`);
   myLibrary = filteredLibrary;
