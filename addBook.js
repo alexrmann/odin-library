@@ -29,12 +29,14 @@ addButton.addEventListener("click", (e) => {
 });
 
 function addBookToLibrary(title, author, pages, read) {
+  
   // Assign arguments to variables
+  // TODO: These may need to be accessed globally
   //
-  let bookTitle = title;
-  let bookAuthor = author;
-  let bookPages = pages;
-  let bookReadStatus = read; // TODO: These may need to be accessed globally
+  // let bookTitle = title;
+  // let bookAuthor = author;
+  // let bookPages = pages;
+  // let bookReadStatus = read;
 
   // Create a book
   //
