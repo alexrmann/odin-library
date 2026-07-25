@@ -149,21 +149,41 @@ function removeAllChildNodes(parent) {
 }
 
 function markAsRead(e) {
-  let target = e.target; // console.log(target);
-  let targetIdentifier = target.getAttribute("data-id");
+  const target = e.target; // console.log(target);
+  const targetIdentifier = target.getAttribute("data-id");
+  const targetBook = document.getElementById(`${targetIdentifier}`);
+  const icon = targetBook.querySelector(".icon");
 
   // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
-  if (book.read === false) {
-    book.read = true;
-    // change button icon to book-check
-    // change alt text to "Mark book as not read"
-    console.log(`Marked book #${targetIdentifier} as read.`);
+
+  if (targetBook.hasAttribute("data-read")) {
+    icon.setAttribute("src", "assets/icons/book-check.svg"); // change button icon to book-check
+    icon.setAttribute("alt", "Mark book as read"); // change alt text to "Mark book as not read"
+
+    targetBook.toggleAttribute("data-read");
+    targetBook.classList.toggle("read");
   } else {
-    book.read = false;
-    // change button icon to book-outline
-    // change alt text to "Mark book as read"
-    console.log(`Marked book #${targetIdentifier} as not read.`);
+    icon.setAttribute("src", "assets/icons/book-outline.svg"); // change button icon to book-outline
+    icon.setAttribute("alt", "Mark book as not read"); // change alt text to "Mark book as read"
+
+    targetBook.toggleAttribute("data-read");
+    targetBook.classList.toggle("unread");
   }
+
+  myLibrary.forEach((book) => {
+    if (targetIdentifier === book.id) {
+      if (book.read === false) {
+        book.read = true;
+        console.log(`Marked book #${targetIdentifier} as read.`);
+      } else {
+        book.read = false;
+        console.log(`Marked book #${targetIdentifier} as not read.`);
+      }
+    }
+  });
+
+  // Rebuild the library
+  displayBooks();
 }
 
 function deleteBook(e) {
