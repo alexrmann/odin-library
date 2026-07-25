@@ -11,11 +11,17 @@ addButton.addEventListener("click", (e) => {
 
   let allValues = []; // Create an array to hold each input value
 
+  // Get the value of each input and reset the form
   inputs.forEach((input) => {
-    // Get the value of each input and then clear the values
-    let inputValue = input.value; // store the value
-    input.value = ""; // clear the value
+    
+    let inputValue; // Create a placeholder for the value
+    if (input.type === 'checkbox') {
+      inputValue = input.checked; // get the boolean state of the checkbox
+    } else {
+      inputValue = input.value; // get the content of the field
+    }
 
+    // Push each value into the allValues array
     allValues.push(inputValue);
     // let bookValue = document.createElement("div"); // Create a block to hold each value
 
