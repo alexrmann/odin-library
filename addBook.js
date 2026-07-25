@@ -23,12 +23,21 @@ addButton.addEventListener("click", (e) => {
 
     // Push each value into the allValues array
     allValues.push(inputValue);
-    // let bookValue = document.createElement("div"); // Create a block to hold each value
 
-    // bookValue.innerText(inputValue); // Add each value to the block
+    // Reset the form fields
+    if (input.type === 'checkbox') {
+      input.checked = false;
+    } else {
+      input.value = ''; // clear the value  
+    }
+
   });
 
-  addBookToLibrary(...allValues); // Spread the input values to use them as arguments for the new book object;
+  // Check the contents of allValues[]
+  console.log(allValues);
+
+  // Spread the input values to use them as arguments for the new book object;
+  addBookToLibrary(...allValues);
   console.log(`Added book #${myLibrary[myLibrary.length - 1].id}`);
   displayBooks();
   firstInput.focus();
