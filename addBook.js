@@ -103,7 +103,7 @@ function displayBooks() {
     // if (book.read === true) { book-check.svg } else { book-outline; }
     let btnTemplateReadStatus = `<div class="container--icon">
         <img
-          class="icon"
+          class="icon icon-read"
           ${
             book.read === false
               ? `src="assets/icons/book-outline.svg"
@@ -116,7 +116,7 @@ function displayBooks() {
 
     let btnTemplateDelete = `<div class="container--icon">
         <img
-          class="icon"
+          class="icon icon-delete"
           src="assets/icons/trash-can-outline.svg"
           alt="Delete book"
         />
