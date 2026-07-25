@@ -117,11 +117,11 @@ function displayBooks() {
         <img
           class="icon icon-read"
           ${
-            book.read === false
-              ? `src="assets/icons/book-outline.svg"
-              alt="Mark book as read"`
-              : `src="assets/icons/book-check.svg"
+            book.read === true
+              ? `src="assets/icons/book-check.svg"
               alt="Mark book as not read"`
+              : `src="assets/icons/book-outline.svg"
+              alt="Mark book as read"`
           }
         />
       </div>`;
