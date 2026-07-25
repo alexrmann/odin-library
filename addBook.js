@@ -39,22 +39,18 @@ addButton.addEventListener("click", (e) => {
   // Spread the input values to use them as arguments for the new book object;
   addBookToLibrary(...allValues);
   console.log(`Added book #${myLibrary[myLibrary.length - 1].id}`);
+
+  // Display the books in myLibrary[]
   displayBooks();
+
+  // Return focus to the first input
   firstInput.focus();
 });
 
 function addBookToLibrary(title, author, pages, read) {
-  
-  // Assign arguments to variables
-  // TODO: These may need to be accessed globally
-  //
-  // let bookTitle = title;
-  // let bookAuthor = author;
-  // let bookPages = pages;
-  // let bookReadStatus = read;
 
   // Create a book
-  //
+
   // 1. Create a bookObject variable and call the Book Constructor with the previous argument variables
   const bookObject = new Book(title, author, pages, read);
 
@@ -115,9 +111,8 @@ function displayBooks() {
     containerBtns.appendChild(btnReadStatus); // Append the delete button to the book item
     containerBtns.appendChild(btnDelete); // Append the delete button to the book item
 
-    // Create Button Templates
+    // CREATE BUTTON TEMPLATES
 
-    // if (book.read === true) { book-check.svg } else { book-outline; }
     let btnTemplateReadStatus = `<div class="container--icon">
         <img
           class="icon icon-read"
@@ -170,20 +165,6 @@ function markAsRead(e) {
   const icon = targetBook.querySelector(".icon");
 
   // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
-
-  if (targetBook.hasAttribute("data-read")) {
-    icon.setAttribute("src", "assets/icons/book-check.svg"); // change button icon to book-check
-    icon.setAttribute("alt", "Mark book as read"); // change alt text to "Mark book as not read"
-
-    targetBook.toggleAttribute("data-read");
-    targetBook.classList.toggle("read");
-  } else {
-    icon.setAttribute("src", "assets/icons/book-outline.svg"); // change button icon to book-outline
-    icon.setAttribute("alt", "Mark book as not read"); // change alt text to "Mark book as read"
-
-    targetBook.toggleAttribute("data-read");
-    targetBook.classList.toggle("unread");
-  }
 
   myLibrary.forEach((book) => {
     if (targetIdentifier === book.id) {
