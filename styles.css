@@ -141,10 +141,26 @@ button:active {
   background-color: crimson;
 }
 
+.btn--cancel:hover,
+.btn--cancel:focus {
+  background: color-mix(in srgb, crimson, black 30%)
+}
+
 .btn--status-read {
   background-color: mediumseagreen;
+}
+
+.btn--status-read:hover,
+.btn--status-read:focus {
+  background: color-mix(in srgb, mediumseagreen, black 30%)
 }
 
 .btn--status-unread {
   background-color: dimgrey;
 }
+
+.btn--status-unread:hover,
+.btn--status-unread:focus {
+  background: color-mix(in srgb, dimgrey, black 30%)
+}
+
