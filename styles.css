@@ -1,10 +1,19 @@
+:root {
+  --clr-body-text: #2f2f2f;
+  --clr-body-grey: dimgrey;
+  --clr-button-blue: #0069ed;
+  --clr-button-red: crimson;
+  --clr-card-white: #fafafa;
+}
+
 body {
-  color:#2f2f2f;
-  background-color: #fafafa;
+  color: var(--clr-body-text);
+  background-color: color-mix(in srgb, var(--clr-body-grey), white 85%);
   font-family: "Roboto", sans-serif;
 }
 
-ul, ol {
+ul,
+ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -18,7 +27,8 @@ input {
   display: block;
 }
 
-.read-status input, .read-status label {
+.read-status input,
+.read-status label {
   display: inline;
 }
 
@@ -30,13 +40,17 @@ input {
   margin-top: 0;
 }
 
+.container--flex {
+  display: flex;
+}
+
 .btn {
   display: block;
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.5em;
   text-decoration: none;
-  background: #0069ed;
+  background-color: var(--clr-button-blue);
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
@@ -47,6 +61,7 @@ input {
     transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none; */
+  box-shadow: 0.1em 0.1em 0.25em var(--clr-body-text);
 }
 
 .btn--round {
@@ -57,12 +72,11 @@ input {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   height: 3rem;
-  box-shadow: 0.1em 0.1em 0.25em #2f2f2f;
 }
 
 button:hover,
 button:focus {
-  background: #0053ba;
+  background: color-mix(in srgb, var(--clr-button-blue), black 30%) ;
 }
 
 button:focus {
@@ -83,7 +97,8 @@ button:active {
 
 .card {
   position: relative;
-  background-color: #f0b429;
+  border: 2px solid var(--clr-body-grey);
+  background: var(--clr-card-white);
   border-radius: 0.5rem;
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0 0 0 / 0.25);
   padding: 1em;
@@ -109,11 +124,16 @@ button:active {
 }
 
 .book__buttons {
-	display: flex;
-	gap: 0.5em;
-	position: absolute;
-	right: 1rem;
-	bottom: 1rem;
+  display: flex;
+  gap: 0.5em;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 0.5em;
 }
 
 .container--button {
@@ -130,37 +150,36 @@ button:active {
 .icon {
   pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
   width: 1.5rem;
-  filter: invert(94%) sepia(88%) saturate(0%) hue-rotate(11deg) brightness(110%) contrast(96%);
+  filter: invert(94%) sepia(88%) saturate(0%) hue-rotate(11deg) brightness(110%)
+    contrast(96%);
 }
 
 .btn__text {
-  text-box: cap alphabetic;
+  text-box: cap alphabetic; /* Will be compatible with Firebox 155 */
 }
 
+.btn--delete,
 .btn--cancel {
-  background-color: crimson;
+  background-color: var(--clr-button-red);
 }
 
+.btn--delete:hover,
+.btn--delete:focus,
 .btn--cancel:hover,
 .btn--cancel:focus {
-  background: color-mix(in srgb, crimson, black 30%)
+  background: color-mix(in srgb, var(--clr-button-red), black 30%);
 }
 
-.btn--status-read {
-  background-color: mediumseagreen;
-}
+/* .btn--status {
+  background-color: #f0b429;
+} */
+/* 
 
-.btn--status-read:hover,
-.btn--status-read:focus {
-  background: color-mix(in srgb, mediumseagreen, black 30%)
-}
+/* .btn--status:hover,
+.btn--status:focus {
+  background: color-mix(in srgb, #f0b429, black 30%);
+} */
 
-.btn--status-unread {
-  background-color: dimgrey;
+dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
 }
-
-.btn--status-unread:hover,
-.btn--status-unread:focus {
-  background: color-mix(in srgb, dimgrey, black 30%)
-}
-
