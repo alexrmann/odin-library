@@ -163,16 +163,21 @@ function markAsRead(e) {
   const targetIdentifier = target.getAttribute("data-id");
   const targetBook = document.getElementById(`${targetIdentifier}`);
   const icon = targetBook.querySelector(".icon");
-
-  // Write a callback function that marks the book as read or unread in myLibrary[] and changes the button appearance
+  // const btnReadStatus = document.querySelector(""); 
+  
+  // Mark the book as read or unread in myLibrary[] and change the button appearance
 
   myLibrary.forEach((book) => {
     if (targetIdentifier === book.id) {
       if (book.read === false) {
         book.read = true;
+        // btnReadStatus.classList.add("btn--status-read");
+        // btnReadStatus.classList.remove("btn--status-unread");
         console.log(`Marked book #${targetIdentifier} as read.`);
       } else {
         book.read = false;
+        // btnReadStatus.classList.remove("btn--status-read");
+        // btnReadStatus.classList.add("btn--status-unread");
         console.log(`Marked book #${targetIdentifier} as not read.`);
       }
     }
