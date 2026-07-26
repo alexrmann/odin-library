@@ -100,12 +100,20 @@
             </fieldset>
           </div>
         </fieldset>
-        <button type="submit" class="btn btn--add">
-          <div class="container--button container--text-with-icon">
-            <img class="icon" src="assets/icons/book-plus.svg" alt="" />
-            <div class="btn__text">Add Book</div>
-          </div>
-        </button>
+        <div class="container form__buttons container--flex">
+          <button type="button" id="close" class="btn btn--cancel">
+            <div class="container--button container--text-with-icon">
+              <img class="icon" src="assets/icons/close.svg" alt="" />
+              <div class="btn__text">Cancel</div>
+            </div>
+          </button>
+          <button id="add" type="submit" class="btn btn--add">
+            <div class="container--button container--text-with-icon">
+              <img class="icon" src="assets/icons/book-plus.svg" alt="" />
+              <div class="btn__text">Add Book</div>
+            </div>
+          </button>
+        </div>
       </form>
     </dialog>
 

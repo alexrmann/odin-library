@@ -1,13 +1,19 @@
 const dialog = document.getElementById("dialog");
-const openButton = document.getElementById("open");
-const closeButton = document.getElementById("close");
+const btnNewBook = document.getElementById("open");
+const btnCancel = document.getElementById("close");
+const btnAddBook = document.getElementById("add");
 
 // Open button opens a modal dialog
-openButton.addEventListener("click", () => {
+btnNewBook.addEventListener("click", () => {
   dialog.showModal();
 });
 
 // Close button closes the dialog box
-closeButton.addEventListener("click", () => {
+btnCancel.addEventListener("click", () => {
+  dialog.close();
+});
+
+// Close button closes the dialog box
+btnAddBook.addEventListener("click", () => {
   dialog.close();
 });
