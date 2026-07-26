@@ -8,7 +8,7 @@
 
 body {
   color: var(--clr-body-text);
-  background-color: color-mix(in srgb, var(--clr-body-grey), white 85%);
+  background-color: color-mix(in srgb, var(--clr-button-blue), white 85%);
   font-family: "Roboto", sans-serif;
 }
 
