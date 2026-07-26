@@ -113,9 +113,9 @@ function displayBooks() {
 
     // CREATE BUTTON TEMPLATES
 
-    let btnTemplateReadStatus = `<div class="container--icon">
+    let btnTemplateReadStatus = `<div class="container--button">
         <img
-          class="icon icon-read"
+          class="icon icon--read"
           ${
             book.read === true
               ? `src="assets/icons/book-check.svg"
@@ -126,7 +126,7 @@ function displayBooks() {
         />
       </div>`;
 
-    let btnTemplateDelete = `<div class="container--icon">
+    let btnTemplateDelete = `<div class="container--button">
         <img
           class="icon icon-delete"
           src="assets/icons/trash-can-outline.svg"

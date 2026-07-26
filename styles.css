@@ -26,10 +26,6 @@ input {
   margin-top: 1em;
 }
 
-.group--input {
-  margin-top: 1em;
-}
-
 .read-status .group--input:first-of-type {
   margin-top: 0;
 }
@@ -39,7 +35,6 @@ input {
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.5em;
-  margin: 1em 0 0 0;
   text-decoration: none;
   background: #0069ed;
   color: #ffffff;
@@ -52,6 +47,17 @@ input {
     transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none; */
+}
+
+.btn--round {
+  color: #fafafa;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 3rem;
+  box-shadow: 0.1em 0.1em 0.25em #2f2f2f;
 }
 
 button:hover,
@@ -110,24 +116,34 @@ button:active {
 	bottom: 1rem;
 }
 
-.btn--round {
-  color: #fafafa;
-  padding: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  height: 3rem;
-  box-shadow: 0.1em 0.1em 0.25em #2f2f2f;
+.container--button {
+  pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
 }
 
-.container--icon {
-  pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
-  display: inline;
+.container--text-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .icon {
   pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
   width: 1.5rem;
   filter: invert(94%) sepia(88%) saturate(0%) hue-rotate(11deg) brightness(110%) contrast(96%);
+}
+
+.btn__text {
+  text-box: cap alphabetic;
+}
+
+.btn--cancel {
+  background-color: crimson;
+}
+
+.btn--status-read {
+  background-color: mediumseagreen;
+}
+
+.btn--status-unread {
+  background-color: dimgrey;
 }
