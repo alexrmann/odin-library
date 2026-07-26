@@ -118,11 +118,12 @@ button:active {
 
 .container--button {
   pointer-events: none; /* Ensures the button is clicked and not the icon or its container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container--text-with-icon {
-  display: flex;
-  align-items: center;
   gap: 0.5em;
 }
 
