@@ -90,7 +90,7 @@ function displayBooks() {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // CREATE THE BUTTONS
     const btnReadStatus = document.createElement("button"); // Create a button to delete the book
-    btnReadStatus.classList.add("btn", "btn--read", "btn--round");
+    btnReadStatus.classList.add("btn", "btn--status", "btn--round");
     btnReadStatus.setAttribute("data-id", `${book.id}`); // Add the unique ID
 
     const btnDelete = document.createElement("button"); // Create a button to delete the book
