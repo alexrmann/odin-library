@@ -13,9 +13,8 @@ addButton.addEventListener("click", (e) => {
 
   // Get the value of each input and reset the form
   inputs.forEach((input) => {
-    
     let inputValue; // Create a placeholder for the value
-    if (input.type === 'checkbox') {
+    if (input.type === "checkbox") {
       inputValue = input.checked; // get the boolean state of the checkbox
     } else {
       inputValue = input.value; // get the content of the field
@@ -25,12 +24,11 @@ addButton.addEventListener("click", (e) => {
     allValues.push(inputValue);
 
     // Reset the form fields
-    if (input.type === 'checkbox') {
+    if (input.type === "checkbox") {
       input.checked = false;
     } else {
-      input.value = ''; // clear the value  
+      input.value = ""; // clear the value
     }
-
   });
 
   // Check the contents of allValues[]
@@ -48,7 +46,6 @@ addButton.addEventListener("click", (e) => {
 });
 
 function addBookToLibrary(title, author, pages, read) {
-
   // Create a book
 
   // 1. Create a bookObject variable and call the Book Constructor with the previous argument variables
@@ -163,8 +160,8 @@ function markAsRead(e) {
   const targetIdentifier = target.getAttribute("data-id");
   const targetBook = document.getElementById(`${targetIdentifier}`);
   const icon = targetBook.querySelector(".icon");
-  // const btnReadStatus = document.querySelector(""); 
-  
+  // const btnReadStatus = document.querySelector("");
+
   // Mark the book as read or unread in myLibrary[] and change the button appearance
 
   myLibrary.forEach((book) => {
