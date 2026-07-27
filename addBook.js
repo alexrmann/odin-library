@@ -155,6 +155,18 @@ function removeAllChildNodes(parent) {
   }
 }
 
+// Book.prototype.markAsRead = (e) => {
+//   if (this.id === e.target.getAttribute("data-id")) {
+//     if (this.read === false) {
+//       this.read = true;
+//       console.log(`Marked book #${this.id} as read.`);
+//     } else {
+//       this.read = false;
+//       console.log(`Marked book #${this.id} as not read.`);
+//     }
+//   }
+// };
+
 function markAsRead(e) {
   const target = e.target; // console.log(target);
   const targetIdentifier = target.getAttribute("data-id");
